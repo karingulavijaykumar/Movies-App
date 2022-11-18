@@ -1,0 +1,61 @@
+.navbar {
+  position: absolute;
+  width: 1440px;
+  height: 103px;
+  left: 0px;
+  top: 0px;
+  background: #131313;
+  opacity: 0.2;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+}
+.movie-image {
+  height: 39px;
+  width: 135.00051879882812px;
+  left: 165px;
+  top: 32px;
+  border-radius: 0px;
+}
+.avatar {
+  height: 48px;
+  width: 48px;
+  left: 1227px;
+  top: 28px;
+  border-radius: 0px;
+}
+.nav-card {
+  display: flex;
+}
+.heading-list-container {
+  display: flex;
+  list-style-type: none;
+}
+.heading-list {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  padding-left: 20px;
+  letter-spacing: -0.355556px;
+
+  color: #ffffff;
+}
+.search-icon {
+  height: 24px;
+  width: 24px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  margin: 20px;
+}
+.search-icon-button {
+  background-color: transparent;
+  border: none;
+}

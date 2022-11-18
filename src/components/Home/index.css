@@ -1,0 +1,64 @@
+.home-container {
+  width: 1440px;
+  height: 1356px;
+  background: #131313;
+}
+
+.home-image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 605px;
+  width: 1440px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background-image: url('https://res.cloudinary.com/dr4h73xhp/image/upload/v1668696337/Image_gzxisr.png');
+}
+
+.display-home-card {
+  top: 750px;
+  height: 500px;
+}
+.home-heading-card {
+}
+
+.super-man-name {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 62px;
+  color: #ffffff;
+}
+.home-details {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+
+  left: 11.39%;
+  right: 57.85%;
+  top: 22.79%;
+  bottom: 71.46%;
+
+  color: #ffffff;
+}
+.play-button {
+  left: 11.42%;
+  right: 83.44%;
+  top: 30.9%;
+  bottom: 66.15%;
+  border: none;
+  padding: 8px 24px;
+  gap: 8px;
+
+  width: 74px;
+  height: 40px;
+
+  background: #ffffff;
+  border-radius: 4px;
+}
