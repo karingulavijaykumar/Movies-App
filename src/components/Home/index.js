@@ -7,7 +7,7 @@ import OriginalsMovies from '../OriginalsMovies'
 import './index.css'
 
 const apiStatusConstants = {
-  initial: 'INITIAL',
+  initial: 'IN_PROGRESS',
   success: 'SUCCESS',
   failure: 'FAILURE',
   inProgress: 'IN_PROGRESS',
@@ -113,13 +113,24 @@ class Home extends Component {
             </button>
           </div>
         </div>
+
         <TrendingNowMovies trendingMovies={trendingMovies} />
+
         <OriginalsMovies originalsMovies={originalsMovies} />
       </>
     )
   }
 
-  renderAllMovies = () => {
+  renderLoadingView = () => (
+    <div
+      className="loader-container"
+      // testid="loader"
+    >
+      <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
+    </div>
+  )
+
+  renderAllTrendingMovies = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
@@ -134,15 +145,6 @@ class Home extends Component {
     }
   }
 
-  renderLoadingView = () => (
-    <div
-      className="loader-container"
-      // testid="loader"
-    >
-      <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
-    </div>
-  )
-
   render() {
     const {trendingMovies, originalsMovies} = this.state
     console.log(trendingMovies)
@@ -152,7 +154,7 @@ class Home extends Component {
     return (
       <div className="home-container">
         <Heading />
-        {this.renderAllMovies()}
+        {this.renderAllTrendingMovies()}
       </div>
     )
   }

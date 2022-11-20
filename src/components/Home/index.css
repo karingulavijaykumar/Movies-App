@@ -62,3 +62,16 @@
   background: #ffffff;
   border-radius: 4px;
 }
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 1024px;
+
+  left: 8547px;
+  top: 1203px;
+  border-radius: 0px;
+
+  background: #181818;
+}
