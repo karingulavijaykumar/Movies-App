@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 import Heading from '../Header'
 import TrendingNowMovies from '../TrendingNowMovies'
 import OriginalsMovies from '../OriginalsMovies'
+import Footer from '../Footer'
 import './index.css'
 
 const apiStatusConstants = {
@@ -42,7 +43,7 @@ class Home extends Component {
     // console.log(response)
     if (response.ok) {
       const fetchedData = await response.json()
-      console.log(fetchedData)
+      //  console.log(fetchedData)
       const updatedData = fetchedData.results.map(eachMovie => ({
         backdropPath: eachMovie.backdrop_path,
         posterPath: eachMovie.poster_path,
@@ -74,7 +75,7 @@ class Home extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
-    console.log(response)
+    // console.log(response)
     if (response.ok) {
       const fetchedData = await response.json()
       // console.log(fetchedData)
@@ -122,10 +123,7 @@ class Home extends Component {
   }
 
   renderLoadingView = () => (
-    <div
-      className="loader-container"
-      // testid="loader"
-    >
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
   )
@@ -155,6 +153,7 @@ class Home extends Component {
       <div className="home-container">
         <Heading />
         {this.renderAllTrendingMovies()}
+        <Footer />
       </div>
     )
   }

@@ -8,18 +8,22 @@ const Heading = () => (
       <Link to="/">
         <img
           alt="website logo"
-          className="movie-image"
+          className="movie-logo-image"
           src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1668663235/Group_7399_kernfa.png"
         />
       </Link>
 
       <ul className="heading-list-container">
-        <Link to="/">
-          <li className="heading-list">Home</li>
-        </Link>
-        <Link to="/popular">
-          <li className="heading-list">Popular</li>
-        </Link>
+        <li>
+          <Link to="/" className="heading-list">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/popular" className="heading-list">
+            Popular
+          </Link>
+        </li>
       </ul>
     </div>
     <div className="nav-card">
@@ -27,7 +31,7 @@ const Heading = () => (
         <button
           type="button"
           className="search-icon-button"
-          // testid='searchButton'
+          testid="searchButton"
         >
           <HiOutlineSearch className="search-icon" />
         </button>
