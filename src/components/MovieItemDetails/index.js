@@ -106,11 +106,11 @@ class MovieItemDetails extends Component {
     return (
       <div className="movie-item-details-card">
         <h1 className="movie-item-heading">{title}</h1>
-        <ul className="movie-item-list-container">
-          <li className="movie-item-list">{runtime}</li>
-          <li className="movie-item-list"> {censorRating}</li>
-          <li className="movie-item-list">{releaseDate}</li>
-        </ul>
+        <div className="movie-item-list-container">
+          <p className="movie-item-list">{runtime}</p>
+          <p className="movie-item-list"> {censorRating}</p>
+          <p className="movie-item-list">{releaseDate}</p>
+        </div>
         <p className="overview">{overview}</p>
         <button type="button" className="play-button">
           Play

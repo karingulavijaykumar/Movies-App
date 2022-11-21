@@ -100,7 +100,7 @@ class Login extends Component {
     return (
       <div className="login-container">
         <img
-          alt="movies"
+          alt="login website logo"
           className="movie-image"
           src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1668663235/Group_7399_kernfa.png"
         />
