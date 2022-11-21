@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
 
 /* Add css to your project */
@@ -44,9 +45,9 @@ class OriginalsMovies extends Component {
         {originalsMovies.map(eachMovie => {
           const {title, posterPath, id} = eachMovie
           return (
-            <div className="slick-item" key={id}>
+            <Link to={`/products/${id}`} className="slick-item" key={id}>
               <img className="logo-image" src={posterPath} alt={title} />
-            </div>
+            </Link>
           )
         })}
       </Slider>

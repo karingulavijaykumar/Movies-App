@@ -128,6 +128,8 @@ class Home extends Component {
     </div>
   )
 
+  renderFailureView = () => <div>Failure</div>
+
   renderAllTrendingMovies = () => {
     const {apiStatus} = this.state
 

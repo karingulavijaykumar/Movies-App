@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -32,10 +33,10 @@ class Popular extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
-    console.log(response)
+    // console.log(response)
     if (response.ok) {
       const fetchedData = await response.json()
-      console.log(fetchedData)
+      // console.log(fetchedData)
       const updatedData = fetchedData.results.map(eachMovie => ({
         backdropPath: eachMovie.backdrop_path,
         posterPath: eachMovie.poster_path,
@@ -68,13 +69,17 @@ class Popular extends Component {
         <Header />
         <ul className="popular-list-container">
           {popularMovieList.map(eachMovie => (
-            <li className="popular-list-card" key={eachMovie.id}>
+            <Link
+              to={`/products/${eachMovie.id}`}
+              className="popular-list-card"
+              key={eachMovie.id}
+            >
               <img
                 alt={eachMovie.title}
                 className="popular-image"
                 src={eachMovie.posterPath}
               />
-            </li>
+            </Link>
           ))}
         </ul>
         <Footer />

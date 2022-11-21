@@ -1,0 +1,49 @@
+.movie-item-details-container {
+  width: 1440px;
+  height: 1351px;
+  background: #181818;
+}
+.movie-item-details-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+.movie-item-heading {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 63px;
+  color: #ffffff;
+}
+.movie-item-list-container {
+  display: flex;
+  list-style-type: none;
+}
+.movie-item-list {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  padding-right: 10px;
+  color: #ffffff;
+}
+.overview {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.play-button {
+  height: 40px;
+  width: 74px;
+  left: 164.5px;
+  top: 419px;
+  border-radius: 3px;
+}
