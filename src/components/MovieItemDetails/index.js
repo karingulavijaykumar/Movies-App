@@ -1,9 +1,11 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
+import {minutesToHours, getYear, getDate, getMonth} from 'date-fns'
 import Header from '../Header'
 import SimilarMoviesItem from '../SimilarMoviesItem'
 import Footer from '../Footer'
+
 import './index.css'
 
 const apiStatusConstants = {
@@ -100,10 +102,19 @@ class MovieItemDetails extends Component {
       voteAverage,
       voteCount,
       spokenLanguages,
-
       budget,
     } = movieItemData
-
+    // console.log(runtime)
+    const timeInHours = minutesToHours(runtime)
+    const minutes = runtime - timeInHours * 60
+    // console.log(timeInHours)
+    // console.log(minutes)
+    const year = getYear(new Date(releaseDate))
+    // console.log(year)
+    const date = getDate(new Date(releaseDate))
+    const month = getMonth(new Date(releaseDate))
+    // console.log(date)
+    // console.log(month)
     const censorRating = adult ? 'A' : 'U/A'
 
     return (
@@ -111,9 +122,11 @@ class MovieItemDetails extends Component {
         <div className="movie-item-details-image-card">
           <h1 className="movie-item-heading">{title}</h1>
           <div className="movie-item-list-container">
-            <p className="movie-item-list">{runtime}</p>
-            <p className="movie-item-list"> {censorRating}</p>
-            <p className="movie-item-list">{releaseDate}</p>
+            <p className="movie-item-list">
+              {timeInHours}h {minutes}m
+            </p>
+            <p className="movie-item-censor"> {censorRating}</p>
+            <p className="movie-item-list">{year}</p>
           </div>
           <p className="overview">{overview}</p>
           <button type="button" className="play-button">
@@ -148,7 +161,9 @@ class MovieItemDetails extends Component {
             <h1 className="movie-item-list-heading">Budget</h1>
             <p className="movie-item-list-details">{budget}</p>
             <h1 className="movie-item-list-heading">Release Date</h1>
-            <p className="movie-item-list-details">{releaseDate}</p>
+            <p className="movie-item-list-details">
+              {date}th {month} {year}
+            </p>
           </div>
         </div>
         <h1 className="more-like-this-heading">More like this</h1>
@@ -164,7 +179,32 @@ class MovieItemDetails extends Component {
     )
   }
 
-  renderFailureView = () => <div>Failure Movie item</div>
+  onClickTryAgain = () => {
+    this.getMovieItem()
+  }
+
+  renderFailureView = () => (
+    <>
+      <Header />
+      <div className="failure-card">
+        <img
+          alt="failure view"
+          className="failure-image"
+          src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1669130054/Background-Complete_qlcqgf.png"
+        />
+        <p className="failure-details">
+          Something went wrong. Please try again
+        </p>
+        <button
+          type="button"
+          className="try-again-button"
+          onClick={this.onClickTryAgain}
+        >
+          Try Again
+        </button>
+      </div>
+    </>
+  )
 
   renderLoadingView = () => (
     <div className="loader-container" testid="loader">

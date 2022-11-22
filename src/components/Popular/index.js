@@ -55,6 +55,10 @@ class Popular extends Component {
     }
   }
 
+  onClickTryAgain = () => {
+    this.getPopularMoviesList()
+  }
+
   renderLoadingView = () => (
     <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
@@ -87,7 +91,28 @@ class Popular extends Component {
     )
   }
 
-  renderFailureView = () => <div>FAilure</div>
+  renderFailureView = () => (
+    <>
+      <Header />
+      <div className="failure-card">
+        <img
+          alt="failure view"
+          className="failure-image"
+          src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1669130054/Background-Complete_qlcqgf.png"
+        />
+        <p className="failure-details">
+          Something went wrong. Please try again
+        </p>
+        <button
+          type="button"
+          className="try-again-button"
+          onClick={this.onClickTryAgain}
+        >
+          Try Again
+        </button>
+      </div>
+    </>
+  )
 
   renderPopularMovies = () => {
     const {apiStatus} = this.state

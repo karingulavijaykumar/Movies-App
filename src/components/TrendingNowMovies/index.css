@@ -27,14 +27,3 @@ Previous Arrow buttons according to your project */
 .slick-next:before {
   color: #ffffff;
 }
-
-.trending-movie-name {
-  font-family: 'HK Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 31px;
-  color: #ffffff;
-  align-self: flex-start;
-  padding-left: 165px;
-}

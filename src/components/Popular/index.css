@@ -18,3 +18,34 @@
   border-radius: 8px;
   padding: 5px 5px;
 }
+.failure-card {
+  height: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.failure-image {
+  height: 276.0001220703125px;
+  width: 375.0012512207031px;
+  border-radius: 0px;
+}
+.failure-details {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #ffffff;
+}
+.try-again-button {
+  height: 48px;
+  left: 46.22%;
+  right: 46.15%;
+  top: calc(50% - 48px / 2 + 182px);
+
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import Heading from '../Header'
+import Header from '../Header'
 import TrendingNowMovies from '../TrendingNowMovies'
 import OriginalsMovies from '../OriginalsMovies'
 import Footer from '../Footer'
@@ -114,9 +114,9 @@ class Home extends Component {
             </button>
           </div>
         </div>
-
+        <h1 className="trending-movie-name">Trending Now</h1>
         <TrendingNowMovies trendingMovies={trendingMovies} />
-
+        <h1 className="originals-name">Originals</h1>
         <OriginalsMovies originalsMovies={originalsMovies} />
       </>
     )
@@ -128,7 +128,33 @@ class Home extends Component {
     </div>
   )
 
-  renderFailureView = () => <div>Failure</div>
+  onClickTryAgain = () => {
+    this.getTrendingNowMovies()
+    this.getOriginals()
+  }
+
+  renderFailureView = () => (
+    <>
+      <Header />
+      <div className="failure-card">
+        <img
+          alt="failure view"
+          className="failure-image"
+          src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1669130054/Background-Complete_qlcqgf.png"
+        />
+        <p className="failure-details">
+          Something went wrong. Please try again
+        </p>
+        <button
+          type="button"
+          className="try-again-button"
+          onClick={this.onClickTryAgain}
+        >
+          Try Again
+        </button>
+      </div>
+    </>
+  )
 
   renderAllTrendingMovies = () => {
     const {apiStatus} = this.state
@@ -153,7 +179,7 @@ class Home extends Component {
 
     return (
       <div className="home-container">
-        <Heading />
+        <Header />
         {this.renderAllTrendingMovies()}
         <Footer />
       </div>

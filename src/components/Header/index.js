@@ -26,24 +26,28 @@ const Heading = () => (
         </li>
       </ul>
     </div>
-    <div className="nav-card">
+    <ul className="nav-card">
       <Link to="/search">
-        <button
-          type="button"
-          className="search-icon-button"
-          testid="searchButton"
-        >
-          <HiOutlineSearch className="search-icon" />
-        </button>
+        <li>
+          <button
+            type="button"
+            className="search-icon-button"
+            testid="searchButton"
+          >
+            <HiOutlineSearch className="search-icon" />
+          </button>
+        </li>
       </Link>
       <Link to="/account">
-        <img
-          alt="profile"
-          className="avatar-image"
-          src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1668782921/Avatar_vxwtis.svg"
-        />
+        <li>
+          <img
+            alt="profile"
+            className="avatar-image"
+            src="https://res.cloudinary.com/dr4h73xhp/image/upload/v1668782921/Avatar_vxwtis.svg"
+          />
+        </li>
       </Link>
-    </div>
+    </ul>
   </nav>
 )
 

@@ -38,6 +38,16 @@
   padding-right: 10px;
   color: #ffffff;
 }
+.movie-item-censor {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  padding: 4px;
+  line-height: 23px;
+  font-size: 12px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
 .overview {
   font-family: 'HK Grotesk';
   font-style: normal;

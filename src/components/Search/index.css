@@ -1,0 +1,31 @@
+.search-movie-container {
+  width: 1440px;
+  height: 1024px;
+
+  background: #181818;
+}
+.search-input {
+  position: absolute;
+  left: 64.65%;
+  right: 17.01%;
+  top: 31.07%;
+}
+.search-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  top: 200px;
+}
+.search-image {
+  height: 170px;
+  width: 255px;
+
+  border-radius: 8px;
+}
+.no-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30%;
+}
