@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
+import SimilarMoviesItem from '../SimilarMoviesItem'
 import Footer from '../Footer'
 import './index.css'
 
@@ -87,35 +88,79 @@ class MovieItemDetails extends Component {
   }
 
   renderMovieItemDetails = () => {
-    const {movieItemData} = this.state
+    const {movieItemData, similarMovieItems} = this.state
     const {
-      posterPath,
+      //      posterPath,
       runtime,
       adult,
       title,
       releaseDate,
       overview,
+      genres,
       voteAverage,
       voteCount,
-      similarMovies,
+      spokenLanguages,
+
       budget,
     } = movieItemData
 
     const censorRating = adult ? 'A' : 'U/A'
 
     return (
-      <div className="movie-item-details-card">
-        <h1 className="movie-item-heading">{title}</h1>
-        <div className="movie-item-list-container">
-          <p className="movie-item-list">{runtime}</p>
-          <p className="movie-item-list"> {censorRating}</p>
-          <p className="movie-item-list">{releaseDate}</p>
+      <>
+        <div className="movie-item-details-image-card">
+          <h1 className="movie-item-heading">{title}</h1>
+          <div className="movie-item-list-container">
+            <p className="movie-item-list">{runtime}</p>
+            <p className="movie-item-list"> {censorRating}</p>
+            <p className="movie-item-list">{releaseDate}</p>
+          </div>
+          <p className="overview">{overview}</p>
+          <button type="button" className="play-button">
+            Play
+          </button>
         </div>
-        <p className="overview">{overview}</p>
-        <button type="button" className="play-button">
-          Play
-        </button>
-      </div>
+        <div className="movie-item-list-card">
+          <div className="list-container">
+            <h1 className="movie-item-list-heading">Genres</h1>
+            {genres.map(eachGenre => (
+              <p className="movie-item-list-details" key={eachGenre.id}>
+                {eachGenre.name}
+              </p>
+            ))}
+          </div>
+          <div className="list-container">
+            <h1 className="movie-item-list-heading">Audio Available</h1>
+            {spokenLanguages.map(eachLanguage => (
+              <p className="movie-item-list-details" key={eachLanguage.id}>
+                {eachLanguage.english_name}
+              </p>
+            ))}
+          </div>
+          <div className="list-container">
+            <h1 className="movie-item-list-heading">Rating Count</h1>
+            <p className="movie-item-list-details">{voteCount}</p>
+            <h1 className="movie-item-list-heading">Rating Average</h1>
+            <p className="movie-item-list-details">{voteAverage}</p>
+          </div>
+
+          <div className="list-container">
+            <h1 className="movie-item-list-heading">Budget</h1>
+            <p className="movie-item-list-details">{budget}</p>
+            <h1 className="movie-item-list-heading">Release Date</h1>
+            <p className="movie-item-list-details">{releaseDate}</p>
+          </div>
+        </div>
+        <h1 className="more-like-this-heading">More like this</h1>
+        <ul className="similar-movie-item-container">
+          {similarMovieItems.map(eachSimilarMovie => (
+            <SimilarMoviesItem
+              similarMovieItemsDetails={eachSimilarMovie}
+              key={eachSimilarMovie.id}
+            />
+          ))}
+        </ul>
+      </>
     )
   }
 
@@ -144,11 +189,13 @@ class MovieItemDetails extends Component {
 
   render() {
     return (
-      <div className="movie-item-details-container">
+      <>
         <Header />
-        {this.renderMovieDetails()}
+        <div className="movie-item-details-container">
+          {this.renderMovieDetails()}
+        </div>
         <Footer />
-      </div>
+      </>
     )
   }
 }

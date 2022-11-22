@@ -1,0 +1,10 @@
+.similar-movie-item-card {
+  padding: 10px;
+}
+.similar-movie-image {
+  height: 170px;
+  width: 255px;
+  left: 165px;
+  top: 758px;
+  border-radius: 8px;
+}

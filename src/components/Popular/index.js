@@ -70,7 +70,7 @@ class Popular extends Component {
         <ul className="popular-list-container">
           {popularMovieList.map(eachMovie => (
             <Link
-              to={`/products/${eachMovie.id}`}
+              to={`/movies/${eachMovie.id}`}
               className="popular-list-card"
               key={eachMovie.id}
             >
