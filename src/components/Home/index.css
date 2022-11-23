@@ -1,21 +1,21 @@
 .home-container {
-  width: 1440px;
-  height: 1356px;
-  background: #131313;
+  background-color: #131313;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home-image-card {
+  width: 100%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  height: 605px;
-  width: 1440px;
-  left: 0px;
-  top: 0px;
-  border-radius: 0px;
-  background-image: url('https://res.cloudinary.com/dr4h73xhp/image/upload/v1668696337/Image_gzxisr.png');
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 800px;
 }
 
 .display-home-card {

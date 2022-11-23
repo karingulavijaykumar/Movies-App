@@ -1,22 +1,22 @@
 .navbar {
-  position: absolute;
-  width: 1440px;
-  height: 103px;
-  left: 0px;
-  top: 0px;
+  width: 100%;
+  padding: 10px;
   background: #131313;
-  opacity: 0.2;
+  opacity: 0.5;
   display: flex;
-  list-style-type: none;
   justify-content: space-around;
   align-items: center;
 }
 .movie-logo-image {
-  height: 39px;
-  width: 135.00051879882812px;
-  left: 165px;
-  top: 20px;
-  border-radius: 0px;
+  align-self: flex-start;
+  padding: 0px;
+  margin: 0px;
+  width: 110px;
+}
+@media screen and (min-width: 769px) {
+  .movie-logo-image {
+    width: 150px;
+  }
 }
 .avatar {
   height: 48px;
