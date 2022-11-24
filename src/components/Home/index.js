@@ -1,13 +1,12 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import TrendingNowMovies from '../TrendingNowMovies'
-
-import './index.css'
 import UserContext from '../../context/UserContext'
 import Footer from '../Footer'
-// import LoadingElement from '../LoaderElement'
 import OriginalsMovies from '../OriginalsMovies'
+import './index.css'
 
 const apiConstants = {
   initial: 'INITIAL',
@@ -95,7 +94,11 @@ class Home extends Component {
       this.getAllVideos()
     }
 
-    const renderLoader = () => <div>Loader</div>
+    const renderLoader = () => (
+      <div className="loader-container" testid="loader">
+        <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
+      </div>
+    )
 
     const renderFailureView = () => (
       <div className="failure-view-container">
