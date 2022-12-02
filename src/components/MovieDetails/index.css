@@ -1,0 +1,184 @@
+.movie-details-container {
+  background-size: cover;
+  height: 80vh;
+}
+.bg-container {
+  background-color: #333333;
+  background-size: cover;
+}
+.movie-details-card {
+  padding-left: 150px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38%,
+    #131313 93%,
+    #131313 98%,
+    #131313 108%
+  );
+}
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.additional-information {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+.play-btn {
+  width: 80px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #171f46;
+  margin-bottom: 8px;
+  text-align: center;
+  border: none;
+}
+.more-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin: 0px;
+}
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding: 0px;
+  margin-right: 10px;
+}
+.info {
+  margin-right: 10px;
+}
+.list-items {
+  padding: 0px;
+  margin: 0px;
+}
+.info-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #64748b;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.items {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #64748b;
+  list-style: none;
+  margin: 3px;
+}
+.info-items {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 12px;
+  color: #64748b;
+}
+.similar-movies-container {
+  padding-left: 25px;
+  padding-right: 18px;
+  margin-top: 10px;
+}
+.more {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.similar-movies-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .movie-details-container {
+    height: 90vh;
+    background-size: cover;
+  }
+  .info-heading {
+    font-size: 16px;
+    line-height: 20px;
+    color: #64748b;
+    margin-bottom: 10px;
+  }
+  .movie-details-card {
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 30px;
+    height: 90vh;
+  }
+  .title {
+    font-size: 60px;
+    line-height: 65px;
+    padding-bottom: 0;
+  }
+  .text {
+    font-size: 20px;
+    line-height: 25px;
+    width: 75%;
+    margin-bottom: 30px;
+  }
+  .additional-information {
+    margin-top: 25px;
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+  .info-items {
+    font-size: 12px;
+    line-height: 20px;
+    color: #64748b;
+  }
+  .similar-movies-container {
+    padding: 0;
+  }
+  .more {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,54 +1,26 @@
-import {Component} from 'react'
-import {Route, Switch, Redirect} from 'react-router-dom'
-import UserContext from './context/UserContext'
+import {Switch, Route} from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
-import Popular from './components/Popular'
-import Login from './components/Login'
+import LoginPage from './components/LoginPage'
 import Home from './components/Home'
-import Account from './components/Account'
+import MovieDetails from './components/MovieDetails'
+import Popular from './components/Popular'
+import Profile from './components/Profile'
 import Search from './components/Search'
-import MovieItemDetails from './components/MovieItemDetails'
 import NotFound from './components/NotFound'
 import './App.css'
 
-class App extends Component {
-  state = {username: '', password: ''}
+const App = () => (
+  <div className="bg-container">
+    <Switch>
+      <Route exact path="/login" component={LoginPage} />
+      <ProtectedRoute exact path="/" component={Home} />
+      <ProtectedRoute exact path="/popular" component={Popular} />
+      <ProtectedRoute exact path="/search" component={Search} />
+      <ProtectedRoute exact path="/account" component={Profile} />
+      <ProtectedRoute exact path="/movies/:id" component={MovieDetails} />
+      <Route component={NotFound} />
+    </Switch>
+  </div>
+)
 
-  onNewPassword = event => {
-    this.setState({password: event.target.value})
-  }
-
-  onNewUsername = event => {
-    this.setState({username: event.target.value})
-  }
-
-  render() {
-    const {username, password} = this.state
-    return (
-      <UserContext.Provider
-        value={{
-          username,
-          password,
-          onNewUsername: this.onNewUsername,
-          onNewPassword: this.onNewPassword,
-        }}
-      >
-        <Switch>
-          <Route exact path="/login" component={Login} />
-          <ProtectedRoute exact path="/" component={Home} />
-          <ProtectedRoute exact path="/popular" component={Popular} />
-          <ProtectedRoute exact path="/account" component={Account} />
-          <ProtectedRoute exact path="/search" component={Search} />
-          <ProtectedRoute
-            exact
-            path="/movies/:id"
-            component={MovieItemDetails}
-          />
-          <Route path="/not-found" component={NotFound} />
-          <Redirect to="not-found" />
-        </Switch>
-      </UserContext.Provider>
-    )
-  }
-}
 export default App

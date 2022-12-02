@@ -1,0 +1,90 @@
+* {
+  font-family: 'Roboto';
+}
+.profile-page {
+  height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+}
+.pro-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #131313;
+}
+.hr-line {
+  width: 80%;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 24px;
+}
+.member-ship-details {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+}
+.member-ship-text {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-right: 10px;
+  color: #94a3b8;
+}
+.user {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #1e293b;
+}
+.pass {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #1e293b;
+}
+.plan-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.plan-text {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #1e293b;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logout-btn {
+  width: 100px;
+  height: 40px;
+  background-color: #e51c01;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 10px;
+  border: none;
+}
+@media (min-width: 768px) {
+  .profile-page {
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,15 @@
+.similar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 13px;
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .similar-img {
+    width: 250px;
+    height: 180px;
+    margin-right: 20px;
+    margin-bottom: 22px;
+  }
+}

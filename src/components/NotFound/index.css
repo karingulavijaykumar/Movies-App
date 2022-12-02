@@ -1,50 +1,40 @@
 .not-found-container {
-  background: linear-gradient(
-      180deg,
-      #4368eb -37.08%,
-      rgba(164, 184, 255, 0) 100%
-    ),
-    url('https://res.cloudinary.com/dr4h73xhp/image/upload/v1668962022/snow-removal-machine-working-high-ski-slope-snowstorm_454047-2149_1_f2zpsw.png');
-
-  height: 1024px;
-  width: 1440px;
-  left: 0px;
-  top: 0px;
-  border-radius: 0px;
+  background-image: url('https://res.cloudinary.com/dkbxi5qts/image/upload/v1660153718/movies%20prime%20app/not_found_background_lg_tqwqrb.svg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-
-.not-found-heading {
-  font-family: 'HK Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 96px;
-  line-height: 125px;
-  /* identical to box height */
-
-  color: #ffffff;
-}
-.not-found-details {
-  font-family: 'HK Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  text-align: center;
-  color: #ffffff;
-}
-.go-to-home-button {
-  width: 79px;
-  height: 24px;
-  font-family: 'HK Grotesk';
+.not-heading {
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-  font-size: 10px;
-  line-height: 24px;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.not-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.back-to-home {
+  width: 220px;
+  height: 40px;
+  background-color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
   color: #171f46;
-  border: none;
-  cursor: pointer;
+  margin-bottom: 10px;
 }

@@ -1,18 +1,37 @@
 .footer-container {
-  width: 100%;
-  line-height: 0;
+  height: 20vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #181818;
-  background-size: cover;
+  justify-content: center;
+  width: 100%;
 }
-.footer-icon {
-  margin: 10px;
+.footer-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.icons {
+  font-size: 16px;
   color: #ffffff;
 }
-.contact-us {
+.contact {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
   color: #ffffff;
-  font-size: 15px;
+  margin-top: 12px;
+}
+@media (min-width: 768px) {
+  .icons {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .contact {
+    font-size: 22px;
+    line-height: 35px;
+    margin-top: 15px;
+  }
 }

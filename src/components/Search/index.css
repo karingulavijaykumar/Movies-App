@@ -1,67 +1,61 @@
 .search-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  padding-left: 32px;
+  padding-top: 20px;
+  min-height: 90vh;
 }
-.search-main-container {
+.search-items {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  background-color: black;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-.search-content {
-  color: white;
-}
-.popular-video-list {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
-.failure-view-container {
+.no-results-view {
+  height: 80vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
 }
-.try-again-button {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
+.no-results-img {
+  width: 220px;
+  height: 190px;
+  margin-bottom: 20px;
 }
-.input-element-container {
-  background-color: transparent;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid grey;
-  width: 280px;
+.no-results-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  width: 300px;
 }
-
-.search-element {
+.loader-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 70vh;
+  justify-content: center;
 }
-
-.input-element {
-  background-color: transparent;
-  padding: 10px;
-  border: none;
-  outline: none;
-  color: white;
-  align-self: flex-end;
-}
-@media screen and (max-width: 768px) {
-  .failure-image {
-    width: 220px;
+@media (min-width: 768px) {
+  .search-container {
+    padding-left: 170px;
+    padding-right: 170px;
   }
-}
-.popular-image {
-  height: 170px;
-  width: 255px;
-  border-radius: 8px;
+  .search-items {
+    margin-top: 32px;
+  }
+  .no-results-img {
+    width: 450px;
+    height: 280px;
+    margin-bottom: 50px;
+  }
+  .no-results-text {
+    padding: 0;
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }

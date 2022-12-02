@@ -1,0 +1,14 @@
+li {
+  list-style: none;
+}
+.img {
+  width: 95px;
+  height: 60px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .img {
+    width: 260px;
+    height: 150px;
+  }
+}

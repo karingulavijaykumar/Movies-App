@@ -1,51 +1,57 @@
-.popular-movie-container {
-  position: relative;
-  width: 1440px;
-  height: 1356px;
-  background: #131313;
-  padding-left: 50px;
-}
-.popular-list-container {
+.list-items {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 105px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  margin-top: 10px;
 }
-
-.popular-image {
-  margin: 0px 4px;
-  height: 170px;
-  width: 255px;
-  border-radius: 8px;
-  padding: 5px 5px;
+.bg-container {
+  background-color: #333333;
+  background-size: cover;
 }
-.failure-card {
-  height: 50%;
-  position: relative;
+.loader-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 80vh;
 }
-.failure-image {
-  height: 276.0001220703125px;
-  width: 375.0012512207031px;
-  border-radius: 0px;
+.failure-container {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 24px;
 }
-.failure-details {
-  font-family: 'HK Grotesk';
+.fail-img {
+  width: 25px;
+  height: 25px;
+}
+.fail-text {
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-
+  font-weight: 600;
+  font-size: 12px;
   color: #ffffff;
+  line-height: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
-.try-again-button {
-  height: 48px;
-  left: 46.22%;
-  right: 46.15%;
-  top: calc(50% - 48px / 2 + 182px);
-
-  border-radius: 3px;
-  cursor: pointer;
+.try-again-btn {
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #171f46;
+  margin-bottom: 8px;
+  width: 80px;
+  height: 32px;
+  background-color: #ffffff;
+  border: none;
+}
+@media (min-width: 768px) {
+  .list-items {
+    margin-top: 30px;
+    padding-left: 170px;
+    padding-right: 170px;
+  }
 }
